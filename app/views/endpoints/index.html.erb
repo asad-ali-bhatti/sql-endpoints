@@ -16,7 +16,8 @@
       <tr>
         <td><%= endpoint.slug %></td>
         <td><%= endpoint.sql_statement%></td>
-        <td><%= link_to 'Show', endpoint %></td>
+
+        <td><%= link_to  'Stats', endpoint_stats_path(endpoint) %></td>
         <td><%= link_to 'Edit', edit_endpoint_path(endpoint) %></td>
         <td><%= link_to 'Destroy', endpoint, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -27,3 +28,4 @@
 <br>
 
 <%= link_to 'New Endpoint', new_endpoint_path %>
+<%= link_to 'Total Stats', stats_path %>

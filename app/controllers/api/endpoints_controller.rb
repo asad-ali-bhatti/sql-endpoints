@@ -3,7 +3,6 @@ module Api
     before_action :set_endpoint
 
     def execute
-
       render json: EndpointExecutorService.run(@endpoint)
     end
 

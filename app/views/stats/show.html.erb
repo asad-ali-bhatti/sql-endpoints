@@ -1,0 +1,24 @@
+<h1>Endpoints Hits Statistics:</h1>
+
+Endpoint Slug: <%= @endpoint.slug %>
+
+<table>
+  <tr>
+    <td>Today hits</td>
+    <td><%= @endpoint.logs.today.count %></td>
+  </tr>
+  <tr>
+    <td>Last 6 hours hits</td>
+    <td><%= @endpoint.logs.in_hours(6).count %></td>
+  </tr><tr>
+  <td>Last 12 hours hits</td>
+  <td><%= @endpoint.logs.in_hours(12).count %></td>
+</tr><tr>
+  <td>Last 24 hours hits</td>
+  <td><%= @endpoint.logs.in_hours(24).count %></td>
+</tr>
+  <tr>
+    <td>Total</td>
+    <td><%= @endpoint.logs.count %></td>
+  </tr>
+</table>
