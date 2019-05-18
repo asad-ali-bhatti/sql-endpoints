@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateEndpointLogs < ActiveRecord::Migration[5.2]
   def change
     create_table :endpoint_logs do |t|
