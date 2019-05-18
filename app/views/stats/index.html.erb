@@ -1,0 +1,26 @@
+<h1>Endpoint Hit Stats:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Endpoint Slug</th>
+      <th>Today</th>
+      <th>6 hours</th>
+      <th>12 hours</th>
+      <th>24 hours</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @endpoints.each do |endpoint| %>
+    <tr>
+      <td><%= endpoint.slug %></td>
+      <td><%= endpoint.logs.today.count %></td>
+      <td><%= endpoint.logs.in_hours(6).count %></td>
+      <td><%= endpoint.logs.in_hours(12).count %></td>
+      <td><%= endpoint.logs.in_hours(24).count %></td>
+      <td><%= endpoint.logs.count %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
