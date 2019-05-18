@@ -7,4 +7,5 @@
   - Today
   - In last 6h, 12h, 24h
 - Access data from the API endpoint
-
+- Other requirements:
+  - Endpoint queries will be only select queries.
